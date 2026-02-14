@@ -69,6 +69,26 @@
       display: inline-block;
       vertical-align: middle;    /* 文字と中心線を揃える */
     }
+    
+    /* スマホ用（画面幅600px以下） */
+@media (max-width: 600px) {
+  body {
+    font-size: 20px; /* ← 読みやすくて大きすぎない */
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .link-list a {
+    font-size: 1.3rem;
+  }
+
+  .creator-info {
+    font-size: 1.1rem;
+  }
+}
+
   </style>
 </head>
 <body>
