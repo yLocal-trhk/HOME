@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>作成グッズ計算ページ</title>
   <!-- Google Fontsの読み込み: RocknRoll One -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,21 +74,66 @@
     /* スマホ用（画面幅600px以下） */
 @media (max-width: 600px) {
   body {
-    font-size: 20px; /* ← 読みやすくて大きすぎない */
+    font-size: 18px; /* 基本サイズ */
+    padding: 15px;
   }
 
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem; /* タイトルを少し強調 */
+    margin-bottom: 25px;
+  }
+
+  .link-list li {
+    margin-bottom: 20px; /* リンク同士の間隔を広げて押しやすく */
   }
 
   .link-list a {
-    font-size: 1.3rem;
+    font-size: 1.2rem; 
+    display: block;    /* リンクをブロック化してタップ範囲を広げる */
+    line-height: 1.4;
   }
 
   .creator-info {
-    font-size: 1.1rem;
+    margin-top: 50px;
+    font-size: 1.2rem;
   }
 }
+
+/* 作品ごとの塊 */
+.work-group {
+  margin-bottom: 30px; /* 作品ごとの間隔 */
+}
+
+.work-title {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 10px;
+  border-left: 4px solid #84c1b1; /* 作品名の横にアクセント線 */
+  padding-left: 8px;
+}
+
+/* イベントリンクの塊 */
+.event-links {
+  display: flex;
+  flex-direction: column; /* 縦に並べる */
+  gap: 12px;              /* リンク同士の隙間 */
+  margin-left: 15px;      /* 少し右にずらして「配下」であることを示す */
+}
+
+.event-links a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  padding: 5px 0;         /* タップしやすく */
+}
+
+.event-links a:hover {
+  text-decoration: underline;
+}
+
 
   </style>
 </head>
@@ -96,12 +142,37 @@
   <h1>作成グッズ計算ページ</h1>
 
   <ul class="link-list">
-    <li><a href="https://ylocal-trhk.github.io/VD-WD-PUS/">■ スタマイ Valentine's Day ＆ White Day POP UP STORE</a></li>
-    <li><a href="https://ylocal-trhk.github.io/coly-cafe-1/">■ ブレマイ KAWAII Cafe♡ Aporia × Sanrio characters in coly cafe!</a></li>
-    <li><a href="https://ylocal-trhk.github.io/We-are-ARASHI/">■ We are ARASHI</a></li>
-    <!-- 必要に応じてLIVE 38まで増やしてください -->
-  </ul>
+  
+  <ul class="link-list">
+  
+  <!-- スタマイのグループ -->
+  <li class="work-group">
+    <span class="work-title">■ スタマイ</span>
+    <div class="event-links">
+      <a href="https://ylocal-trhk.github.io/VD-WD-PUS/">Valentine's Day ＆ White Day POP UP STORE</a>
+    </div>
+  </li>
 
+  <!-- ブレマイのグループ -->
+  <li class="work-group">
+    <span class="work-title">■ ブレマイ</span>
+    <div class="event-links">
+<a href="https://ylocal-trhk.github.io/coly-cafe-1/">KAWAII Cafe♡ Aporia × Sanrio characters in coly cafe!</a>
+    </div>
+  </li>
+
+ <li>
+    <span class="work-title">■ ARASHI</span>
+    <a href="https://ylocal-trhk.github.io/We-are-ARASHI/">We are ARASHI</a>
+  </li>
+  
+</ul>
+
+  
+  
+  
+  
+  
   <div class="creator-info">
     作成者：
     <a href="https://x.com" target="_blank" rel="noopener" class="creator-link">
